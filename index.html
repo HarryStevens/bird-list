@@ -3,18 +3,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<!--Scripts-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="scripts.js"></script>
 
 		<!--Styles-->
 		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="jquery-ui.css" />
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>New Web Project</title>
+		<title>The Hapless Birds</title>
 	</head>
 	<body>
 		<h1>The Hapless Birds</h1>
 		<div id="main-content">
-			<div id="bird-intro">6,239 birds have been struck by planes at JFK, LaGuardia and Newark airports between Apr. 13, 1990 and Oct. 30, 2013. Some birds have been less lucky than others. Here are the ten bird species that have been struck the most.</div>
+
 			<div id="bird-list">
 
 				<!--Bird 1-->
@@ -42,7 +45,7 @@
 						#2. American Kestrel
 					</div>
 					<div class="bird-photo">
-						<img src="images/hering_gull.jpg" />
+						<img src="images/american_kestrel.jpg" />
 					</div>
 					<div class="bird-number">
 						Strikes reported: 197
@@ -58,13 +61,16 @@
 				<!--Bird 3-->
 				<div class="bird">
 					<div class="bird-name">
-						#1. Bird Name
+						#3. Rock Pigeon
 					</div>
 					<div class="bird-photo">
-						<img src="images/hering_gull.jpg" />
+						<img src="images/pigeon.jpg" />
 					</div>
 					<div class="bird-number">
-						Strikes reported: ##
+						Strikes reported: 180
+					</div>
+					<div class="bird-status">
+						Conservation status: Least Concern
 					</div>
 					<div class="bird-info">
 						Info about the bird. The bird is really cool and crazy and there is a lot of stuff you should know about this bird. This bird sometimes gets hit by planes also.
@@ -74,13 +80,35 @@
 				<!--Bird 4-->
 				<div class="bird">
 					<div class="bird-name">
-						#1. Bird Name
+						#4. Laughing Gull
 					</div>
 					<div class="bird-photo">
-						<img src="images/hering_gull.jpg" />
+						<img src="images/laughing_gull.jpg" />
 					</div>
 					<div class="bird-number">
-						Strikes reported: ##
+						Strikes reported: 166
+					</div>
+					<div class="bird-status">
+						Conservation status: Least Concern
+					</div>
+					<div class="bird-info">
+						Info about the bird. The bird is really cool and crazy and there is a lot of stuff you should know about this bird. This bird sometimes gets hit by planes also.
+					</div>
+				</div>
+
+				<!--Bird 5-->
+				<div class="bird">
+					<div class="bird-name">
+						#5. European Starling
+					</div>
+					<div class="bird-photo">
+						<img src="images/european_starling.jpg" />
+					</div>
+					<div class="bird-number">
+						Strikes reported: 164
+					</div>
+					<div class="bird-status">
+						Conservation status: Least Concern
 					</div>
 					<div class="bird-info">
 						Info about the bird. The bird is really cool and crazy and there is a lot of stuff you should know about this bird. This bird sometimes gets hit by planes also.
@@ -90,28 +118,16 @@
 				<!--Bird 6-->
 				<div class="bird">
 					<div class="bird-name">
-						#1. Bird Name
+						#6. Barn Swallow
 					</div>
 					<div class="bird-photo">
-						<img src="images/hering_gull.jpg" />
+						<img src="images/barn_swallow.jpg" />
 					</div>
 					<div class="bird-number">
-						Strikes reported: ##
+						Strikes reported: 138
 					</div>
-					<div class="bird-info">
-						Info about the bird. The bird is really cool and crazy and there is a lot of stuff you should know about this bird. This bird sometimes gets hit by planes also.
-					</div>
-				</div>
-				
-				<div class="bird">
-					<div class="bird-name">
-						#1. Bird Name
-					</div>
-					<div class="bird-photo">
-						<img src="images/hering_gull.jpg" />
-					</div>
-					<div class="bird-number">
-						Strikes reported: ##
+					<div class="bird-status">
+						Conservation status: Least Concern
 					</div>
 					<div class="bird-info">
 						Info about the bird. The bird is really cool and crazy and there is a lot of stuff you should know about this bird. This bird sometimes gets hit by planes also.
@@ -121,13 +137,16 @@
 				<!--Bird 7-->
 				<div class="bird">
 					<div class="bird-name">
-						#1. Bird Name
+						#7. Ring-billed Gull
 					</div>
 					<div class="bird-photo">
-						<img src="images/hering_gull.jpg" />
+						<img src="images/ring-billed_gull.jpg" />
 					</div>
 					<div class="bird-number">
-						Strikes reported: ##
+						Strikes reported: 115
+					</div>
+					<div class="bird-status">
+						Conservation status: Least Concern
 					</div>
 					<div class="bird-info">
 						Info about the bird. The bird is really cool and crazy and there is a lot of stuff you should know about this bird. This bird sometimes gets hit by planes also.
@@ -137,13 +156,16 @@
 				<!--Bird 8-->
 				<div class="bird">
 					<div class="bird-name">
-						#1. Bird Name
+						#8. Barn Owl
 					</div>
 					<div class="bird-photo">
-						<img src="images/hering_gull.jpg" />
+						<img src="images/barn_owl.jpg" />
 					</div>
 					<div class="bird-number">
-						Strikes reported: ##
+						Strikes reported: 112
+					</div>
+					<div class="bird-status">
+						Conservation status: Least Concern
 					</div>
 					<div class="bird-info">
 						Info about the bird. The bird is really cool and crazy and there is a lot of stuff you should know about this bird. This bird sometimes gets hit by planes also.
@@ -153,13 +175,16 @@
 				<!--Bird 9-->
 				<div class="bird">
 					<div class="bird-name">
-						#1. Bird Name
+						#9. Canada Goose
 					</div>
 					<div class="bird-photo">
-						<img src="images/hering_gull.jpg" />
+						<img src="images/canada_goose.jpg" />
 					</div>
 					<div class="bird-number">
-						Strikes reported: ##
+						Strikes reported: 95
+					</div>
+					<div class="bird-status">
+						Conservation status: Least Concern
 					</div>
 					<div class="bird-info">
 						Info about the bird. The bird is really cool and crazy and there is a lot of stuff you should know about this bird. This bird sometimes gets hit by planes also.
@@ -169,21 +194,52 @@
 				<!--Bird 10-->
 				<div class="bird">
 					<div class="bird-name">
-						#1. Bird Name
+						#10. Mourning Dove
 					</div>
 					<div class="bird-photo">
-						<img src="images/hering_gull.jpg" />
+						<img src="images/mourning_dove.jpg" />
 					</div>
 					<div class="bird-number">
-						Strikes reported: ##
+						Strikes reported: 93
+					</div>
+					<div class="bird-status">
+						Conservation status: Least Concern
 					</div>
 					<div class="bird-info">
 						Info about the bird. The bird is really cool and crazy and there is a lot of stuff you should know about this bird. This bird sometimes gets hit by planes also.
 					</div>
 				</div>
-			
+
 			</div>
 
+			<div id="side-nav">
+				<div id="byline">
+					By Benedetta Riva, Harry Stevens, Winni Zhou & Annie Waldman
+				</div>
+				<div id="bird-intro">
+					<p>6,239 birds have been struck by planes at JFK, LaGuardia and Newark airports between Apr. 13, 1990 and Oct. 30, 2013. Some birds have been <a href="http://google.com/">less lucky than others</a>. Here are the ten bird species that have been struck the most.</p>
+					<p>Herring gulls have had it the worst, but other birds have been hit a lot too. It's pretty hard being a bird around lots of giant airplanes. <a href="http://twitter.com/">It can be very dangerous</a>.</p>
+					<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <a href="http://facebook.com/">ullamco laboris</a> nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div id="credits">
+					IMAGE CREDITS:
+					Herring gull - <a href="https://flic.kr/p/5f4jsi">Jim Champion, treehouse1977, flickr</a>;
+					American kestrel - <a href="http://en.wikipedia.org/wiki/File:AmericanKestrel02.jpg">Greg Hume, Greg5030, Wikimedia Commons</a>;
+					Rock pigeon - <a href="https://flic.kr/p/6TvceS">Ingrid Taylar, taylar, flickr</a>;
+					Laughing gull - <a href="https://flic.kr/p/cDKDZY">Jason Crotty, JAC6.FLICKR, flickr</a>;
+					European starling - <a href="https://flic.kr/p/sqGKi">Ferran Pestaña, ferranp, flickr</a>;
+					Barn swallow - <a href="https://flic.kr/p/35agwe">Lip Kee, lipkee, flickr</a>;
+					Ring-billed gull - <a href="https://flic.kr/p/4ruMFY">black_throated_green_warbler, flickr</a>;
+					Barn owl - <a href="https://flic.kr/p/bfEWgV">Mark Chambers, Portable Portraits, flickr</a>;
+					Canada goose - <a href="https://flic.kr/p/9o5Fe7">Dendroica Cerulea, dendroica, flickr</a>;
+					Mourning dove - <a href="https://flic.kr/p/c8uWKo">Dawn Beattie, pics4dawn, flickr</a>
+				</div>
+			</div>
+
+		</div><!--End main-content-->
+		
+		<div class="data" title="Check out this data">
+			<img style="text-align:center;" src="images/linechart.png" />
 		</div>
 
 	</body>
