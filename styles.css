@@ -1,0 +1,54 @@
+/*div {
+	outline: 1px solid #aaa;
+}*/
+body {
+	display: table;
+	margin: 0 auto;
+	width: 960px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+	font-family: Georgia;
+	text-align: center;
+}
+#bird-intro {
+	margin-bottom: 10px;
+}
+#main-content {
+	display: table;
+	margin: 0 auto;
+}
+#bird-list {
+	display: table;
+	margin: 0 auto;
+	width: 63%;
+}
+.bird {
+	margin-bottom: 10px;
+	height: 178px;
+	padding: 4px;
+	border: 1px solid #000;
+}
+.bird:hover {
+}
+.bird-name {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.bird-number {
+	margin-bottom: 8px;
+}
+.bird-photo {
+	float: left;
+	width: 25%;
+	margin-right: 8px;
+}
+.bird-photo img {
+	width: 100%;
+}
+.bird-info {
+	font-size: 13px;
+}
+.bird-status {
+	margin-bottom: 8px;
+}
