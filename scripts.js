@@ -7,12 +7,16 @@ $(document).ready(function() {
 
 function clickHandler() {
 	$(".bird").on("click", function() {
-		console.log("clickeroo!");
 		$(".data").dialog({
+
 			show : {
-				effect : "fold",
-				duration : 1000
+				effect : "drop",
+				duration : 500
 			}
+		}, {
+			modal: true
+		}, {
+			draggable : true
 		}, {
 			height : 560
 		}, {
@@ -23,8 +27,8 @@ function clickHandler() {
 			dialogClass : "data-alert"
 		}, {
 			hide : {
-				effect : "fold",
-				duration : 1000
+				effect : "drop",
+				duration : 500
 			}
 		});
 	});

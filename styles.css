@@ -56,10 +56,13 @@ a:active {
 	margin-bottom: 10px;
 	height: 178px;
 	padding: 4px;
+	padding-left: 6px;
 	border: 2px solid #000;
+	border-radius: 4px;
 	box-shadow: 4px 4px 5px #888888;
 	cursor: pointer;
 	opacity: .9;
+	background-color: #FCE6C9;
 }
 .bird:hover {
 	opacity: 1;
@@ -84,4 +87,39 @@ a:active {
 }
 .bird-status {
 	margin-bottom: 8px;
+}
+.data {
+	display:none;
+}
+.ui-dialog-title {
+	background-color: #FCE6C9;
+	font-family: Arial,helvetica,sans-serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 22px;
+}
+
+.ui-widget-header {
+	background: #fff;
+	border: none;
+}
+.ui-dialog-titlebar {
+	background-color: #FCE6C9;
+}
+/*.ui-widget-header {
+	background-color: #fff;
+}*/
+.ui-dialog {
+	border: 2px solid #000;
+	border-radius: 4px;
+	box-shadow: 4px 4px 5px #888888;
+	background: #FCE6C9;
+}
+.ui-icon-closethick {
+	border: 1px solid #000;
+	border-radius: 4px;
+}
+.ui-widget-overlay {
+	background: #000;
+	opacity: .8;
 }
