@@ -52,6 +52,11 @@ a:active {
 	font-size: 13px;
 	margin-top: 30px;
 }
+#data {
+	display: table;
+	margin: 0 auto;
+	margin-top: 0px;
+}
 .bird {
 	margin-bottom: 10px;
 	height: 178px;
@@ -91,9 +96,15 @@ a:active {
 .data {
 	display: none;
 }
+.data-text {
+	margin-left: 50px;
+	margin-bottom: 0px;
+	font-family: Arial, helvetica, sans-serif;
+	font-size: 16px;
+}
 .ui-dialog-title {
 	background-color: #fdf9f3;
-	font-family: Arial, helvetica, sans-serif;
+	font-family: Georgia;
 	font-weight: normal;
 	text-align: center;
 	font-size: 22px;
@@ -122,4 +133,8 @@ a:active {
 .ui-widget-overlay {
 	background: #000;
 	opacity: .8;
+}
+.depress {
+	margin-left: 3px;
+	box-shadow: none;
 }
