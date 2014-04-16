@@ -3,7 +3,12 @@
  */
 $(document).ready(function() {
 	clickHandler();
+	//draggable();
 });
+
+function draggable() {
+	$(".bird").draggable();
+}
 
 function clickHandler() {
 	$(".bird").on("click", function() {
@@ -14,9 +19,9 @@ function clickHandler() {
 				duration : 500
 			}
 		}, {
-			modal: true
+			modal : false
 		}, {
-			draggable : true
+			draggable : false
 		}, {
 			height : 560
 		}, {

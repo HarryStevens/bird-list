@@ -1,6 +1,6 @@
 /*div {
-	outline: 1px solid #aaa;
-}*/
+ outline: 1px solid #aaa;
+ }*/
 body {
 	display: table;
 	margin: 0 auto;
@@ -62,7 +62,7 @@ a:active {
 	box-shadow: 4px 4px 5px #888888;
 	cursor: pointer;
 	opacity: .9;
-	background-color: #FCE6C9;
+	background-color: #fdf9f3;
 }
 .bird:hover {
 	opacity: 1;
@@ -89,11 +89,11 @@ a:active {
 	margin-bottom: 8px;
 }
 .data {
-	display:none;
+	display: none;
 }
 .ui-dialog-title {
-	background-color: #FCE6C9;
-	font-family: Arial,helvetica,sans-serif;
+	background-color: #fdf9f3;
+	font-family: Arial, helvetica, sans-serif;
 	font-weight: normal;
 	text-align: center;
 	font-size: 22px;
@@ -104,16 +104,16 @@ a:active {
 	border: none;
 }
 .ui-dialog-titlebar {
-	background-color: #FCE6C9;
+	background-color: #fdf9f3;
 }
 /*.ui-widget-header {
-	background-color: #fff;
-}*/
+ background-color: #fff;
+ }*/
 .ui-dialog {
 	border: 2px solid #000;
 	border-radius: 4px;
 	box-shadow: 4px 4px 5px #888888;
-	background: #FCE6C9;
+	background: #fdf9f3;
 }
 .ui-icon-closethick {
 	border: 1px solid #000;
