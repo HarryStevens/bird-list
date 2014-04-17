@@ -96,6 +96,10 @@ function clickHandler() {
 		var currID = $(this).attr('id');
 		$("#" + currID).removeClass("depress");
 	});
+	$(".bird").on("mouseleave", function() {
+		var currID = $(this).attr('id');
+		$("#" + currID).removeClass("depress");
+	});
 }//end ClickHandler
 
 //This is a joke function to drag all the bird cards around. It is disabled in the document ready function,
