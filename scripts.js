@@ -2,63 +2,14 @@
  * @author Harry Stevens
  */
 
+
+
 //When everything is loaded, this function will luanch clickHandler
 $(document).ready(function() {
 	pageLoaded();
 	clickHandler();
 	//draggable();
 });
-
-//pageLoaded function loads the Google Visualization library and calls the clickHandler
-function pageLoaded() {
-	google.load("visualization", "1", {
-		packages : ["corechart"],
-		callback : googleLoaded
-	});
-}
-
-// Load the json from the fusion table and call dataLoaded function
-function googleLoaded() {
-	//Get request grabs the data from Google Fusion Table
-	$.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT+*+FROM+1lygsoHUDr_8FzACROCbqWSG5Lh09d2VVYaQKav2T&key=AIzaSyB-QJux9WIJmey5IJYzPImNzg-xP1gpvU8", dataLoaded, "json");
-}
-
-function dataLoaded(BIRDS) {
-	var data = google.visualization.arrayToDataTable([
-		["Year","Herring Gull", "American Kestrel"],
-		["1990",5,2],
-		["1991",7,2],
-		["1992",8,2]
-		]);
-	var options = {
-		backgroundColor : {
-			//stroke : '#000',
-			//strokeWidth : 1,
-			fill: '#fdf9f3',
-		},
-		legend : {
-			//position : 'top',
-		},
-		height : 450,
-		width: 760,
-		chartArea : {
-			//width: '80%',
-			//height: '80%'
-		},
-		vAxis : {
-			title : 'Number',
-			baselineColor : '#000',
-			gridlines: {
-				color: '#fdf9f3'}
-		},
-		hAxis : {
-			title : 'Year',
-		},
-		colors: ['#50a6c2','#af593d']
-	};
-	var chart = new google.visualization.ColumnChart(document.getElementById('data'));
-	chart.draw(data, options);
-}
 
 //This function explains what to do what a bird card is clicked (i.e. any element with class "bird")
 function clickHandler() {
@@ -71,7 +22,7 @@ function clickHandler() {
 				duration : 333
 			}
 		}, {
-			modal : false
+			modal : true
 		}, {
 			draggable : false
 		}, {
@@ -103,7 +54,80 @@ function clickHandler() {
 		var currID = $(this).attr('id');
 		$("#" + currID).removeClass("depress");
 	});
+
 }//end ClickHandler
+
+//pageLoaded function loads the Google Visualization library and calls the clickHandler
+function pageLoaded() {
+	google.load("visualization", "1", {
+		packages : ["corechart"],
+		callback : googleLoaded
+	});
+}
+
+// Load the json from the fusion table and call dataLoaded function
+function googleLoaded() {
+
+	$('.bird').on('click',function() {
+		var jsonID = $(this).attr('id');
+		$.get("data/"+jsonID+"--yrs.json", dataLoaded, "json");		
+	});
+	//Get request grabs the data from Google Fusion Table
+}
+
+// Display the Google Visualization in the data popup
+function dataLoaded(BIRDS) {
+
+	//Turning json object into array of arrays
+	var birdData = BIRDS.Data;
+	var birdName = birdData[0].Name;
+	console.log(birdName);
+	var dataArray = [];
+	var dataHeaders = ["Year","Bird strikes"];
+	dataArray.push(dataHeaders);
+	for(var i=1;i<birdData.length;i++){
+		var currObj = birdData[i];
+		var currArray = [currObj.Year,currObj.Value];
+		dataArray.push(currArray);
+	}
+	
+	$('.data-title').html(birdName);
+	
+	var data = google.visualization.arrayToDataTable(dataArray);
+	var options = {
+		//title: birdName,
+		titleTextStyle : {
+			fontName: 'Georgia',
+			fontSize: 22,
+		},
+		backgroundColor : {
+			//stroke : '#000',
+			//strokeWidth : 1,
+			fill : '#fdf9f3',
+		},
+		legend : {
+			position : 'none',
+		},
+		height : 400,
+		width : 960,
+		chartArea : {
+			left: 30
+		},
+		vAxis : {
+			title : 'Number',
+			baselineColor : '#000',
+			gridlines : {
+				color : '#fdf9f3'
+			}
+		},
+		hAxis : {
+			title : 'Year',
+		},
+		colors : ['#50a6c2', '#af593d']
+	};
+	var chart = new google.visualization.ColumnChart(document.getElementById('data'));
+	chart.draw(data, options);
+}
 
 //This is a joke function to drag all the bird cards around. It is disabled in the document ready function,
 //but can be activated by removing the slahes in front of it. It's hilarious.

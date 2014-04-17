@@ -131,10 +131,14 @@ a:active {
 	border-radius: 4px;
 }
 .ui-widget-overlay {
-	background: #000;
-	opacity: .8;
+	background: #fff;
 }
 .depress {
 	margin-left: 3px;
 	box-shadow: none;
+}
+.data-title {
+	font-family: Georgia;
+	text-align: center;
+	font-size: 22px;
 }
