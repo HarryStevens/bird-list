@@ -67,7 +67,7 @@ function clickHandler() {
 		//that begin with .ui-
 		$(".data").dialog({
 			show : {
-				effect : "drop",
+				effect : "slideDown",
 				duration : 500
 			}
 		}, {
@@ -82,7 +82,7 @@ function clickHandler() {
 			position : "center"
 		}, {
 			hide : {
-				effect : "drop",
+				effect : "slideUp",
 				duration : 500
 			}
 		});
