@@ -47,6 +47,9 @@ function dataLoaded(BIRDS) {
 		},
 		vAxis : {
 			title : 'Number',
+			baselineColor : '#000',
+			gridlines: {
+				color: '#fdf9f3'}
 		},
 		hAxis : {
 			title : 'Year',
