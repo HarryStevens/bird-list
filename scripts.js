@@ -18,7 +18,7 @@ function clickHandler() {
 		//that begin with .ui-
 		$(".data").dialog({
 			show : {
-				effect : "slideDown",
+				effect : "drop",
 				duration : 333
 			}
 		}, {
@@ -38,7 +38,7 @@ function clickHandler() {
 			position : "center"
 		}, {
 			hide : {
-				effect : "slideUp",
+				effect : "drop",
 				duration : 333
 			}
 		});//End dialog options
