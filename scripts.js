@@ -68,7 +68,7 @@ function clickHandler() {
 		$(".data").dialog({
 			show : {
 				effect : "slideDown",
-				duration : 500
+				duration : 333
 			}
 		}, {
 			modal : false
@@ -83,7 +83,7 @@ function clickHandler() {
 		}, {
 			hide : {
 				effect : "slideUp",
-				duration : 500
+				duration : 333
 			}
 		});
 		//End dialog options
