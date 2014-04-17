@@ -6,6 +6,7 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="http://momentjs.com/downloads/moment.min.js"></script>
 		<script type="text/javascript" src="scripts.js"></script>
 
 		<!--Styles-->
@@ -22,7 +23,7 @@
 			<div id="bird-list">
 
 				<!--Bird 1-->
-				<div class="bird" id="herring_gull">
+				<div class="bird" id="herring_gull" title="Herring Gull">
 					<div class="bird-name">
 						1. Herring Gull
 					</div>
@@ -41,7 +42,7 @@
 				</div>
 
 				<!--Bird 2-->
-				<div class="bird" id="american_kestrel">
+				<div class="bird" id="american_kestrel" title="American Kestrel">
 					<div class="bird-name">
 						2. American Kestrel
 					</div>
@@ -60,7 +61,7 @@
 				</div>
 
 				<!--Bird 3-->
-				<div class="bird" id="european_starling">
+				<div class="bird" id="european_starling" title="European Starling">
 					<div class="bird-name">
 						3. European Starling
 					</div>
@@ -79,7 +80,7 @@
 				</div>
 		
 				<!--Bird 4-->
-				<div class="bird" id="barn_swallow">
+				<div class="bird" id="barn_swallow" title="Barn Swallow">
 					<div class="bird-name">
 						4. Barn Swallow
 					</div>
@@ -98,7 +99,7 @@
 				</div>
 				
 				<!--Bird 5-->
-				<div class="bird" id="laughing_gull">
+				<div class="bird" id="laughing_gull" title="Laughing Gull">
 					<div class="bird-name">
 						5. Laughing Gull
 					</div>
@@ -118,7 +119,7 @@
 
 
 				<!--Bird 6-->
-				<div class="bird" id="rock_pigeon">
+				<div class="bird" id="rock_pigeon" title="Rock Pigeon">
 					<div class="bird-name">
 						6. Rock Pigeon
 					</div>
@@ -137,7 +138,7 @@
 				</div>
 
 				<!--Bird 7-->
-				<div class="bird" id="mourning_dove">
+				<div class="bird" id="mourning_dove" title="Mourning Dove">
 					<div class="bird-name">
 						7. Mourning Dove
 					</div>
@@ -156,7 +157,7 @@
 				</div>
 
 				<!--Bird 8-->
-				<div class="bird" id="killdeer">
+				<div class="bird" id="killdeer" title="Killdeer">
 					<div class="bird-name">
 						8. Killdeer
 					</div>
@@ -175,7 +176,7 @@
 				</div>
 				
 				<!--Bird 9-->
-				<div class="bird" id="ring-billed_gull">
+				<div class="bird" id="ring-billed_gull" title="Ring-Billed Gull">
 					<div class="bird-name">
 						9. Ring-billed Gull
 					</div>
@@ -194,7 +195,7 @@
 				</div>
 
 				<!--Bird 10-->
-				<div class="bird" id="mallard">
+				<div class="bird" id="mallard" title="Mallard">
 					<div class="bird-name">
 						10. Mallard
 					</div>
@@ -213,7 +214,7 @@
 				</div>
 				
 				<!--Bird 11-->
-				<div class="bird" id="barn_owl">
+				<div class="bird" id="barn_owl" title="Barn Owl">
 					<div class="bird-name">
 						11. Barn Owl
 					</div>
@@ -232,7 +233,7 @@
 				</div>
 				
 				<!--Bird 12-->
-				<div class="bird" id="eastern_meadowlark">
+				<div class="bird" id="eastern_meadowlark" title="Eastern Meadowlark">
 					<div class="bird-name">
 						12. Eastern Meadowlark
 					</div>
@@ -251,7 +252,7 @@
 				</div>
 				
 				<!--Bird 13-->
-				<div class="bird" id="canada_goose">
+				<div class="bird" id="canada_goose" title="Canada Goose">
 					<div class="bird-name">
 						13. Canada Goose
 					</div>
@@ -307,8 +308,9 @@
 
 		</div><!--End main-content-->
 
-		<div class="data">
-			<div class="data-title">#</div>
+		<div class="data" title="#">
+			<div class="data-title"></div>
+			<div class="dialog-photo"></div>
 			<!--<div class="data-text">Notice that Herring Gulls have increased. American Kestrels, on the other hand, haven't. </div>-->
 			<div id="data"></div>
 		</div>

@@ -24,9 +24,14 @@ function clickHandler() {
 		}, {
 			modal : true
 		}, {
+			title : $(this).attr("title")
+		},	{
 			draggable : false
 		}, {
-			height : 560
+			height : 500
+		}, {
+			open: function (event, ui) {
+    $('.data').css('overflow', 'hidden');} //this line does the actual hiding
 		}, {
 			width : 794
 		}, {
@@ -36,10 +41,15 @@ function clickHandler() {
 				effect : "slideUp",
 				duration : 333
 			}
-		});
-		//End dialog options
-	});
-	//end jQuery UI click
+		});//End dialog options
+		
+		/*NOT QUITE WORKING YET!
+		//This puts the right image into the dialog box		
+		var currID = $(this).attr("id");
+		$(".dialog-photo").append('<img src="images/'+currID+'.jpg" />');
+		*/
+		
+ 	});//end jQuery UI click
 
 	//This will make the bird cards depress slightly when users click the mouse, and return to the original state when they release the mouse
 	$(".bird").on("mousedown", function() {
@@ -70,9 +80,10 @@ function googleLoaded() {
 
 	$('.bird').on('click',function() {
 		var jsonID = $(this).attr('id');
+		//Get request grabs the data from Google Fusion Table
 		$.get("data/"+jsonID+"--yrs.json", dataLoaded, "json");		
 	});
-	//Get request grabs the data from Google Fusion Table
+
 }
 
 // Display the Google Visualization in the data popup
@@ -81,47 +92,48 @@ function dataLoaded(BIRDS) {
 	//Turning json object into array of arrays
 	var birdData = BIRDS.Data;
 	var birdName = birdData[0].Name;
-	console.log(birdName);
 	var dataArray = [];
-	var dataHeaders = ["Year","Bird strikes"];
+	var dataHeaders = ["Year","Number Struck"];
 	dataArray.push(dataHeaders);
 	for(var i=1;i<birdData.length;i++){
 		var currObj = birdData[i];
+		
+		//Something strange is happening with date formatting, so the formatted date is not being passed to the array
+		//for now
+		var currDate = new Date(currObj.Year);
+		console.log(currDate);
+		
 		var currArray = [currObj.Year,currObj.Value];
 		dataArray.push(currArray);
 	}
 	
-	$('.data-title').html(birdName);
-	
 	var data = google.visualization.arrayToDataTable(dataArray);
 	var options = {
-		//title: birdName,
 		titleTextStyle : {
 			fontName: 'Georgia',
 			fontSize: 22,
 		},
 		backgroundColor : {
-			//stroke : '#000',
-			//strokeWidth : 1,
 			fill : '#fdf9f3',
 		},
 		legend : {
 			position : 'none',
-		},
+		},	
 		height : 400,
-		width : 960,
-		chartArea : {
-			left: 30
-		},
+		width : 820,
+		//chartArea : {
+		//	left: 30
+		//},
 		vAxis : {
 			title : 'Number',
 			baselineColor : '#000',
-			gridlines : {
-				color : '#fdf9f3'
-			}
+			//gridlines : {
+			//	color : '#fdf9f3'
+			//}
 		},
 		hAxis : {
 			title : 'Year',
+			ticks: ['1990','1995','2000','2005','2010']
 		},
 		colors : ['#50a6c2', '#af593d']
 	};
@@ -134,14 +146,5 @@ function dataLoaded(BIRDS) {
 function draggable() {
 	$(".bird").draggable();
 }
-
-/*
- //Puts the right image in place
- function imager () {
- var parentID = $(".bird-photo").parent().attr("id");
- console.log(parentID);
- $(".bird-photo").html('<img src="images/'+parentID+'.jpg" />')
- console.log('<img src="images/'+parentID+'.jpg" />');
- }
- */
+ 
 
