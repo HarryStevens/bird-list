@@ -77,7 +77,7 @@ a:active {
 	margin-bottom: 5px;
 }
 .bird-number {
-	margin-bottom: 8px;
+	margin-bottom: 14px;
 }
 .bird-photo {
 	float: left;
@@ -92,6 +92,7 @@ a:active {
 }
 .bird-status {
 	margin-bottom: 8px;
+	display:none;
 }
 .data {
 	display: none;
