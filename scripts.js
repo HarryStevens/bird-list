@@ -24,7 +24,7 @@ function clickHandler() {
 		}, {
 			modal : true
 		}, {
-			title : $(this).attr("title")
+			title : $(this).attr("name")
 		},	{
 			draggable : false
 		}, {
