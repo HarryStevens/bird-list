@@ -43,9 +43,11 @@ a:active {
 #bird-list {
 	width: 63%;
 	float: left;
-	margin-right: 20px;
+	margin-left: 20px;
 }
 #side-nav {
+	float: left;
+	width: 34%;
 }
 #credits {
 	font-style: italic;
